@@ -7,22 +7,39 @@ class Car{
         // this._timeIn = timeIn;
         // this._timeOut = timeOut;
     }
-    // get time(){
-    //     return (this.timeOut - this.timeIn);
-    payment = (this._hours * this._rate);
-    // bill(){
-    //     return `Car ${this.carReg} owes $ (this._hours*rate)`;
-    // }
+    // payment = (this._hours * this._rate);
+    payment(){
+        return (this._hours * this._rate);
+    }
+    bill(){
+        return `Car ${this._carReg} owes ${this.payment()}`;
+    }
 };
+
+class Staff extends Car {
+    constructor(carReg, hours, id, credits){
+    super(carReg, hours);
+    this._id = id;
+    this._credits = credits;
+}
+staffpay() {
+    return this.payment() - this._credits
+}
+staffbill() {
+    return `Staff member ${this._id} owes ${this.staffpay()}.`
+}
+}
 
 // const car1 = new Car("ABC", 1200, 1400);
 const car1 = new Car("ABC", 5);
 // console.log(car1.bill());
-console.log(car1.payment);
+// console.log(car1.payment());
+// console.log(car1.bill());
+const staff1 = new Staff("ZXC", 6, "1234", 7);
+console.log(staff1.staffbill());
 
-
-
-
+//my own work is above - this worked first time !! fuck yes !! 
+//below I believe is what Neil went through as an answer. 
 
 
 // class Car {
