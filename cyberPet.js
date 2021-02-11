@@ -33,7 +33,7 @@ class Pet {
       // } if (this.hunger > 2 && this.thirst > 2 && this.fun > 2) { // had to add this as the else statement runs even when an above if is met?
       //     console.log(`I'm happy to do something. Would you like to play, feed or hydrate me?`);
     }
-    if (this.fun == 0 && this.thirst == 0) {
+    if (this.hunger == 0 && this.thirst == 0) {
       h3.textContent = `You have really neglected me and I died of hunger and thirst simultaneously`;
       h1.textContent = `You killed ${pet1.name}, refresh the page to try again.`;
       if (interactions.style.display === "none") {
