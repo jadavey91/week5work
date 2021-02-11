@@ -1,5 +1,6 @@
 class Pet {
-  constructor(type) {
+  constructor(name, type) {
+    this.name = name;
     this.type = type;
     this.hunger = 5;
     this.thirst = 5;
@@ -55,15 +56,15 @@ class Pet {
 //     }
 // }
 
-const bill = new Pet("Dog");
-// console.log(Bill);
-// console.log(Bill.type);
-// bill.play();
-// bill.play();
-// bill.play();
+// const bill = new Pet("Bill", "Dog");
+// // console.log(Bill);
+// console.log(bill.name);
+// // bill.play();
+// // bill.play();
+// // bill.play();
 
-const jack = new Pet("Cat");
+// const jack = new Pet("Jack", "Cat");
 
-jack.feed();
-jack.feed();
-jack.feed();
+// jack.feed();
+// jack.feed();
+// jack.feed();
