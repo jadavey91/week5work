@@ -51,7 +51,7 @@ class Pet {
         interactions.style.display = "none";
       }
     }
-    if (this.thirst == 0) {
+    if (this.thirst == 0 && this.hunger > 0) {
       h3.textContent = `I'm so dehydrated that I've actually died!`;
       h1.textContent = `You killed ${pet1.name}, refresh the page to try again.`;
       if (interactions.style.display === "none") {
@@ -60,7 +60,7 @@ class Pet {
         interactions.style.display = "none";
       }
     }
-    if (this.hunger == 0) {
+    if (this.hunger == 0 && this.thirst > 0) {
       h3.textContent = `Well you've only gone and starved me to death haven't you!`;
       h1.textContent = `You killed ${pet1.name}, refresh the page to try again.`;
       if (interactions.style.display === "none") {
